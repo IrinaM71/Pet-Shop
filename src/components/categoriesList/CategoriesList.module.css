@@ -1,0 +1,38 @@
+.sektion {
+  margin-bottom: 106px;
+}
+
+.list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  color: #8b8b8b;
+  padding: 40px 0;
+}
+
+.error {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  color: #d32f2f;
+  padding: 40px 0;
+  background-color: #fdecea;
+  border: 1px solid #f5c2c0;
+  border-radius: 12px;
+}
