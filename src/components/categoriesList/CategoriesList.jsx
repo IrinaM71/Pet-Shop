@@ -1,6 +1,6 @@
 import CategoryCard from "../categoryCard/CategoryCard";
 import CategoryCardSkeleton from "../categoryCard/Skeleton";
-import styles from "./CategoryCard.module.css";
+import styles from "./CategoriesList.module.css";
 
 const SKELETON_FALLBACK = 8;
 

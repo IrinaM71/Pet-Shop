@@ -1,0 +1,12 @@
+.section {
+  margin-bottom: 80px;
+}
+
+.list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fill, 316px);
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}

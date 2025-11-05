@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { http } from "@/shared/http";
+import { http } from "../../shared/http";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",

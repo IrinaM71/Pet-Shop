@@ -1,0 +1,111 @@
+.container {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 80px;
+}
+
+.infogrid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.phoneBlock {
+  order: 0;
+}
+
+.addressBlock {
+  order: 1;
+}
+
+.hoursBlock {
+  order: 2;
+}
+
+.socialBlock {
+  order: 3;
+}
+
+@media (min-width: 768px) {
+  .infogrid {
+    display: grid;
+    grid-template-columns: 195fr 137fr;
+    grid-template-areas:
+      "phone socials"
+      "address hours";
+  }
+
+  .phoneBlock {
+    order: 0;
+    grid-area: phone;
+  }
+
+  .socialBlock {
+    order: 1;
+    grid-area: socials;
+  }
+
+  .addressBlock {
+    order: 2;
+    grid-area: address;
+  }
+
+  .hoursBlock {
+    order: 3;
+    grid-area: hours;
+  }
+}
+
+.infoBlock {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #8b8b8b;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #282828;
+}
+
+.socials {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.mapWrapper {
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: clamp(32px, 8vw, 40px);
+  }
+}

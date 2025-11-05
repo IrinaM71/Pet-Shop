@@ -1,0 +1,104 @@
+.item.mui {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: start;
+  gap: 32px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-right: 1px solid #ddd;
+}
+
+.info {
+  flex: 1;
+  position: relative;
+  padding: 32px;
+}
+
+.title.mui {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.controls {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.prices {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  position: relative;
+}
+
+.nawPrice.mui {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #282828;
+}
+
+.oldPrice.mui {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #282828;
+  text-decoration: line-through;
+}
+
+.removeBtn {
+  margin-left: auto;
+}
+
+.removeIcon {
+  width: 24px;
+  height: 24px;
+  color: #282828;
+}
+
+@media (max-width: 1200px) {
+  :global(.quantityButtons.mui) {
+    width: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .item.mui {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .image {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .info {
+    padding: 16px;
+  }
+
+  .controls {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+}

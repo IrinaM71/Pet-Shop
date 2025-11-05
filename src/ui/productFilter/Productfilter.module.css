@@ -1,0 +1,44 @@
+.priceForm:global(.MuiStack-root) {
+  gap: 16px;
+  width: 309px;
+}
+
+.filterLable:global(.Muitypography-root) {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.input:global(.MuiFormControl-root) {
+  margin: 0;
+}
+
+.input:global(.MuiOutlinedInput-notChedOutline) {
+  padding: 0;
+}
+
+.input:global(.MuiInputBase-Input) {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.input:global(.MuiInputBase-Input::placeholder) {
+  color: #8b8b8b;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  opacity: 1;
+}
+
+.lable:global(.MuiFormControlLable-root) {
+  margin-top: 0px;
+}
+
+@media (max-width: 375px) {
+  .priceForm:global(.MuiStack-root) {
+    max-width: 272px;
+  }
+}

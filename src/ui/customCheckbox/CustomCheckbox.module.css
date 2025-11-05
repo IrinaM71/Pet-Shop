@@ -1,0 +1,42 @@
+.root {
+  padding: 0;
+  line-height: 0;
+}
+
+.box {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: background 120ms ease, border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.root:hover .box {
+  border-color: #cfcfcf;
+}
+
+.root:global(.Mui-focusVisible) .box {
+  box-shadow: 0 0 0 3px rgba(13, 80, 255, 0.25);
+}
+
+.boxChecked {
+  border-color: #0d50ff;
+  background: #0d50ff;
+}
+
+.check {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  pointer-events: none;
+}
+
+.root:global(.Mui-disabled) .box {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

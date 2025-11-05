@@ -1,0 +1,49 @@
+.container {
+  max-width: 1440px;
+  margin: 40px auto 0;
+  padding: 0 40px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr minmax(360px, 548px);
+  column-gap: 32px;
+  row-gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.cartMessage {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #282828;
+  margin-bottom: 32px;
+}
+
+.continueShoppingBtn.mui {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  background-color: #0d50ff;
+  border-radius: 6px;
+  box-shadow: none;
+  text-transform: none;
+  padding: 16px 32px;
+}
+
+.continueShoppingBtn.mui:hover {
+  background-color: #000;
+}
+
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+}
