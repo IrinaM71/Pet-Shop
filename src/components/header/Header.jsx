@@ -1,6 +1,7 @@
 import styles from "./Header.module.css";
-import Logo from "../../assets/icons/logosvg";
+import Logo from "../../assets/icons/logo.svg";
 import CartBadge from "./CartBadge";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useSelector } from "react-redux";
 import { useMemo, useState } from "react";
 import { Box, Drawer, IconButton, useMediaQuery } from "@mui/material";

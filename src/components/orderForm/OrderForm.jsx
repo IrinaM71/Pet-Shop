@@ -37,7 +37,7 @@ const OrderForm = ({ onSuccess, orderPlaced }) => {
   const disabled = isSubmitting || orderPlaced;
 
   return (
-    <Form
+    <form
       className={styles.form}
       onSubmit={handleSubmit(onSubmit)}
       noValidate
@@ -129,7 +129,7 @@ const OrderForm = ({ onSuccess, orderPlaced }) => {
           ? "Sending..."
           : "Order"}
       </button>
-    </Form>
+    </form>
   );
 };
 

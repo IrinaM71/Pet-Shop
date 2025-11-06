@@ -10,10 +10,14 @@ import {
 import styles from "./ProductFilter.module.css";
 import CustomCeckbox from "../customCheckbox/CustomCeckbox";
 
-const ProductFilter = (filters, onChange, hideDiscount = false) => {
+const ProductFilter = ({
+  filters,
+  onChange = () => {},
+  hideDiscount = false,
+}) => {
   const handleChange = (field) => (event) => {
     const value =
-      field === "discoundOnly" ? event.target.checked : event.target.value;
+      field === "discountOnly" ? event.target.checked : event.target.value;
     onChange({ ...filters, [field]: value });
   };
 
@@ -70,7 +74,7 @@ const ProductFilter = (filters, onChange, hideDiscount = false) => {
         <FormControlLabel
           control={
             <CustomCeckbox
-              checked={filters.discoundOnly}
+              checked={filters.discountOnly}
               onChange={handleChange("discountOnly")}
             />
           }
@@ -117,7 +121,7 @@ const ProductFilter = (filters, onChange, hideDiscount = false) => {
           Sorted
         </Typography>
         <Select
-          value={filters.sortBy}
+          value={filters.sortBy ?? "default"}
           onChange={handleChange("sortBy")}
           displayEmpty
           sx={{

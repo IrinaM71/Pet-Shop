@@ -7,7 +7,7 @@ import {
   DESCRIPTION_MIN_HIDDEN,
   RELATED_TAKE,
 } from "./constants";
-import { makeExpandable } from "./shared/utils/text";
+import { makeExpandable } from "../../shared/utils/text";
 
 export const useProducts = (params = {}) => {
   const { limit, categoryId, filters = {} } = params;

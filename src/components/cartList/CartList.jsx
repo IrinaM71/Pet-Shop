@@ -3,11 +3,11 @@ import styles from "./CartList.module.css";
 import CartItem from "../cartItem/CartItem";
 
 const CartList = () => {
-  const { item } = useSelector((state) => state.cart);
+  const { items } = useSelector((state) => state.cart);
 
   return (
     <ul className={styles.list}>
-      {item.map((item) => (
+      {items.map((item) => (
         <CartItem key={item.id} item={item} />
       ))}
     </ul>

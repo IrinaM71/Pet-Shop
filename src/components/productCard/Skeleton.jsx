@@ -1,5 +1,5 @@
 import { Skeleton } from "@mui/material";
-import styles from "./ProductCard.module.scc";
+import styles from "./ProductCard.module.css";
 
 const ProductCardSkeleton = () => {
   return (

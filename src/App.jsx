@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import MainLayout from "./layouts/MainLayout";
-import { Home } from "./pages/home/Home";
-import { Categories } from "./pages/categories/Categories";
-import { Products } from "./pages/products/Products";
-import { Sales } from "./pages/sales/Sales";
-import { Cart } from "./pages/cart/Cart";
-import { NotFound } from "./pages/notFound/NotFound";
+import Home from "./pages/home/Home";
+import Categories from "./pages/categories/Categories";
+import Products from "./pages/products/Products";
+import Sales from "./pages/sales/Sales";
+import Cart from "./pages/cart/Cart";
+import NotFound from "./pages/notFound/NotFound";
 
 function App() {
   return (

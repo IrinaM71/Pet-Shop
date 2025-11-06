@@ -4,15 +4,14 @@ import { useEffect, useState } from "react";
 import { Box, Button, sliderClasses, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { addToCart } from "../../redux/slices/cartSlice";
-import QuantitySelector from "../../ui/quantitySelector/QuantitySelector"; 
-import { derivePricing, resolveImgUrl } from "../../shared/utils/product";
+import QuantitySelector from "../../ui/quantitySelector/QuantitySelector";
+import { derivePricing, resolveImageUrl } from "../../shared/utils/product";
 import {
-    useEnsureProductsLoaded,
-    useRelatedProducts,
-    useMagnifyOrigin,
-    useEnsureProductDescriptionExpandable
-} from "../../features/products/hooks"
-
+  useEnsureProductsLoaded,
+  useRelatedProducts,
+  useMagnifyOrigin,
+  useProductDescriptionExpandable,
+} from "../../features/products/hooks";
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
@@ -28,7 +27,7 @@ const Product = ({ product }) => {
     toggle: toggleShowFull,
     canToggle: canToggleDescription,
     displayText: descriptionText,
-  } = useEnsureProductDescriptionExpandable(product);
+  } = useProductDescriptionExpandable(product);
 
   useEffect(() => {
     setQuantity(1);
@@ -37,7 +36,7 @@ const Product = ({ product }) => {
   if (!product) return null;
 
   const { effectivePrice, oldPrice, discountPercent } = derivePricing(product);
-  const imgSrc = resolveImgUrl(product.image);
+  const imgSrc = resolveImageUrl(product.image);
 
   const handleAddToCart = () => {
     dispatch(addToCart({ product, quantity }));
@@ -66,7 +65,7 @@ const Product = ({ product }) => {
             to={`/products/${relatedItems.id}`}
           >
             <img
-              src={resolveImgUrl(relatedItems.image)}
+              src={resolveImageUrl(relatedItems.image)}
               alt={relatedItems.title}
             />
           </NavLink>
@@ -118,7 +117,7 @@ const Product = ({ product }) => {
         <Box className={`${styles.controls} ${styles.mui}`}>
           <QuantitySelector
             quantity={quantity}
-            onDescrease={() => setQuantity(Math.max(1, quantity - 1))}
+            onDecrease={() => setQuantity(Math.max(1, quantity - 1))}
             onIncrease={() => setQuantity(quantity + 1)}
           />
           <Button

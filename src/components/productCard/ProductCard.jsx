@@ -12,8 +12,8 @@ import {
   Typography,
 } from "@mui/material";
 import { addToCart } from "../../redux/slices/cartSlice";
-import { derivePricing, resolveImageUrl } from "./shared/utils/product";
-import { formatPrice } from "./shared/utils/money";
+import { derivePricing, resolveImageUrl } from "../../shared/utils/product";
+import { formatPrice } from "../../shared/utils/money";
 
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const ProductCard = ({ product }) => {
         {discountPercent != null && (
           <Box className={styles.badge}>-{discountPercent}</Box>
         )}
-        <Box className={`${styles.madiaWrapper} ${styles.mui}`}>
+        <Box className={`${styles.mediaWrapper} ${styles.mui}`}>
           {!imgLoaded && (
             <Skeleton variant="rectangular" width="100%" height={284} />
           )}

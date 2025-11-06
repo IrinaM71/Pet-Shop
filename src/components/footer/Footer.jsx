@@ -3,7 +3,7 @@ import Instagram from "../../assets/icons/ic-instagram.svg";
 import WhatsApp from "../../assets/icons/ic-whatsapp.svg";
 
 const address = "Wallstraße 9-13, 10179 Berlin, Deutschland";
-const mapSrc = `htttp://www.google.com/maps?q=${encodeURIComponent(
+const mapSrc = `http://www.google.com/maps?q=${encodeURIComponent(
   address
 )}&z=15&output=embed`;
 

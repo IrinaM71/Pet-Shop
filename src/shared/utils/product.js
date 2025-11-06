@@ -12,7 +12,9 @@ const toNumber = (value) => {
 };
 
 export const resolveImageUrl = (imagePath) =>
-  imagePath?.startWith?.(http) ? imagePath : `${CONFIG.API_URL}/${imagePath}`;
+  imagePath?.startsWith?.("http")
+    ? imagePath
+    : `${CONFIG.API_URL}/${imagePath}`;
 
 export const hasActiveDiscount = (product) => {
   if (!product) return false;
@@ -60,7 +62,7 @@ export const shuffle = (array) => {
   return copy;
 };
 
-export const getRelatedProduct = (items, currentProduct, count = 3) => {
+export const getRelatedProducts = (items, currentProduct, count = 3) => {
   if (!currentProduct || !Array.isArray(items)) return [];
   const sameCategory = items.filter(
     (item) =>
