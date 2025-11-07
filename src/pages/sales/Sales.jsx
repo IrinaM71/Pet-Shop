@@ -7,7 +7,7 @@ import { useState } from "react";
 function Sales() {
   const items = [{ path: "/", Label: "Main Page" }, { label: "All sales" }];
   const [filters, setFilters] = useState({
-    minPrise: "",
+    minPriсe: "",
     maxPrice: "",
     discountOnly: true,
     sortBy: "default",
