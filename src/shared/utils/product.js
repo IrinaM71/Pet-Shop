@@ -1,5 +1,4 @@
 import { CONFIG } from "../config";
-import { http } from "../http";
 
 const toNumber = (value) => {
   if (value === null) return NaN;

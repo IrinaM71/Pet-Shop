@@ -40,7 +40,7 @@ export const useProducts = (params = {}) => {
     }
     const max = Number(filters.maxPrice);
     if (!Number.isNaN(max) && String(filters.maxPrice) !== "") {
-      data = data.filter((item) => Number(item.effectivePrice) >= max);
+      data = data.filter((item) => Number(item.effectivePrice) <= max);
     }
 
     switch (filters.sortBy) {
